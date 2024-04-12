@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Sum and Product of Array</title>
+</head>
+<body>
+
+<script>
+  
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  function computeSum(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum;
+  }
+
+  function computeProduct(arr) {
+    var product = 1;
+    for (var i = 0; i < arr.length; i++) {
+      product *= arr[i];
+    }
+    return product;
+  }
+
+  var sum = computeSum(numbers);
+  var product = computeProduct(numbers);
+
+  document.write("Sum: " + sum + "<br>");
+  document.write("Product: " + product);
+</script>
+
+</body>
+</html>

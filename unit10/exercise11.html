@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Add Items to Array</title>
+</head>
+<body>
+
+<input type="text" id="text1">
+<input type="button" id="button1" value="Add" onclick="add_item_to_array();">
+<input type="button" id="button2" value="Display" onclick="display_array();">
+<div id="Result"></div>
+
+<script>
+ 
+  var array = [];
+
+  function add_item_to_array() {
+    var newItem = document.getElementById("text1").value;
+    array.push(newItem);
+    alert("Element: " + newItem + " added at index " + (array.length - 1));
+    document.getElementById("text1").value = "";
+  }
+
+  function display_array() {
+    var result = "<hr/>";
+    for (var y = 0; y < array.length; y++) {
+      result += "Element " + y + " = " + array[y] + "<br/>";
+    }
+    document.getElementById("Result").innerHTML = result;
+  }
+</script>
+
+</body>
+</html>
+

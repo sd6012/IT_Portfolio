@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+    <style>
+        #container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border: 3px solid black;
+            border-radius: 2px;
+            max-height: 1698px;
+        }
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topnav {
+            background-color: #989595;
+            color: #fff;
+            padding: 10px 25px; 
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .topnav i {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .link-box {
+            flex-grow: 1; 
+            background-color: #fff;
+            height: 30px;
+            border-radius: 5px;
+            margin: 0 10px; 
+        }
+
+        nav {
+            width: 84%;
+            margin: auto;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fakeimg {
+            width: 100px; 
+            height: 100px;
+            background-color: #e0dfdf;
+            text-align: center;
+            line-height: 100px; 
+            margin-right: 20px;
+            order: -1; 
+            border: 2px solid black; 
+            padding: 10px; 
+        }
+
+        .joint-box {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .joint-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .joint-box ul li {
+            margin: 0 10px; 
+            position: relative; 
+        }
+
+        .joint-box ul li a {
+            text-decoration: none;
+            color: #000;
+            position: relative; 
+        }
+
+        .joint-box ul li a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -5px;
+            height: 100%;
+            width: 1px; 
+            background-color: #000;
+        }
+
+        .joint-box ul li.highlight a {
+            background-color: rgb(149, 203, 252); 
+            padding: 5px 10px; 
+            border-radius: 5px; 
+        }
+
+        .text-below {
+            text-align: right ;
+            margin-top: -15px;
+            padding-bottom: 10px; 
+        }
+
+        .leftcolumn,
+        .rightcolumn {
+            background-color: #b7b3b3; 
+            padding: 20px;
+            width: calc(50% - 20px); 
+            float: left;
+            margin-right: 20px; 
+            box-sizing: border-box; 
+        }
+
+        .leftcolumn .left-col,
+        .rightcolumn .right-col {
+            margin-bottom: 20px; 
+            padding: 30px; 
+        }
+
+        .leftcolumn .fakeimg,
+        .rightcolumn .fakeimg {
+            margin-bottom: 20px; 
+            padding: 10px; 
+        }
+
+        .leftcolumn h3, 
+        .rightcolumn h3,
+        .leftcolumn p,
+        .rightcolumn p {
+            margin: 2px;
+        }
+        .leftcolumn h3, 
+        .rightcolumn h3{
+            color:  rgb(46, 130, 208); 
+        }
+        footer {
+            padding: 2vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        } 
+
+        .footer-col {
+            padding-bottom: 20px;
+        }
+
+        .footer-col .fakeimg {
+            width: 200px; 
+            height: 200px; 
+            font-size: 24px;
+        }
+
+        footer h3 {
+            color: rgb(10, 9, 12);
+            font-weight: 600;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        footer li {
+            list-style: none;
+            color: #050b0f;
+            padding: 5px 0;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        footer p {
+            color: #000101;
+            font-size: 18px;
+        }
+
+        .footer-col p,
+        .footer-col li {
+            font-size: 14px; 
+            position: relative;
+            top:10px;
+        }
+        
+
+        footer h4 {
+            margin-bottom: 10px;
+            margin-top: 5px;
+            font-weight: 600;
+            font-size: 24px;
+            color: #020101;
+        }
+
+        .footer {
+            width: 200%;
+            margin: 10px 20px;
+            position: relative;
+            padding-left: 20px;
+            width: 3000px;
+            background-color: #aba9a9;
+            padding: 10px 25px; 
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="topnav">
+            <i class="fa fa-arrow-left"></i>
+            <i class="fa fa-arrow-right"></i>
+            <i class="fa fa-times"></i>
+            <i class="fa fa-home"></i>
+            <div class="link-box"></div> 
+            <i class="fa fa-search"></i> 
+        </div>
+        <nav>
+            <div class="fakeimg">Logo</div>
+            <div class="joint-box">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li class="highlight"><a href="">Work With</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-below">
+            <p>Callele d tx Opicina 20, 28029, Madrid Tel 91 756S.</p>
+        </div>
+        <hr size="5" color="grey">
+        <div class="ceo">
+            <h2>Who We Work With</h2>
+            <table width="100%">
+                <tr>
+                    <!-- First row, first column -->
+                    <td class="leftcolumn" border-spacing="20px">
+                        <div class="left-col">
+                            <div class="fakeimg">CompanyLogo</div>
+                            <h3>CocaCola</h3> 
+                            <p>Steve Jobs-CEO</p>
+                            <hr size="5" color="black">
+                            <p>Working with Rees....Nullam id dolor id ribh<br>
+                                ultricies vehicula ut id elit. Donec id elit non<br> 
+                                mi porta grovida ot eget metus. moecenas<br>
+                                paucibus mollis interdum.</p>
+                        </div>
+                    </td>
+                    <!-- First row, second column -->
+                    <td class="rightcolumn" border-spacing="20px">
+                        <div class="right-col">
+                            <div class="fakeimg">CompanyLogo</div>
+                            <h3>CocaCola</h3> 
+                            <p>Steve Jobs-CEO</p>
+                            <hr size="5" color="black">
+                            <p>Working with Rees....Nullam id dolor id ribh<br>
+                                ultricies vehicula ut id elit. Donec id elit non<br> 
+                                mi porta grovida ot eget metus. moecenas<br>
+                                paucibus mollis interdum.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- Second row, first column -->
+                    <td class="leftcolumn" border-spacing="20px">
+                        <div class="left-col">
+                            <div class="fakeimg">CompanyLogo</div>
+                            <h3>CocaCola</h3> 
+                            <p>Steve Jobs-CEO</p>
+                            <hr size="5" color="black">
+                            <p>Working with Rees....Nullam id dolor id ribh<br>
+                                ultricies vehicula ut id elit. Donec id elit non<br> 
+                                mi porta grovida ot eget metus. moecenas<br>
+                                paucibus mollis interdum.</p>
+                        </div>
+                    </td>
+                    <!-- Second row, second column -->
+                    <td class="rightcolumn" border-spacing="20px">
+                        <div class="right-col">
+                            <div class="fakeimg">CompanyLogo</div>
+                            <h3>CocaCola</h3> 
+                            <p>Steve Jobs-CEO</p>
+                            <hr size="5" color="black">
+                            <p>Working with Rees....Nullam id dolor id ribh<br>
+                                ultricies vehicula ut id elit. Donec id elit non<br> 
+                                mi porta grovida ot eget metus. moecenas<br>
+                                paucibus mollis interdum.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr size="5" color="grey">
+        <footer>
+            <div class="footer-col">
+                <h3>Site Map</h3>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Who We Work</li>
+                <li>Contact</li>
+                </div>
+            <div class="footer-col">
+                <h3>Client Testimonials</h3>
+                <p> Ouis mollis, est non commondo leuctus,<br>
+                nisi enst porttor ligula eget lacinia<br>
+                odio sem nec olit Mortbi les risus,<br>
+                portes ac consectetur ac, vestiretwdv at </p>
+                <li>Steve Silly</li>
+                <li>CEO Windsor Foods</li>
+            </div>
+            <div class="footer-col">
+                <div class="fakeimg">Google Map</div>
+            </div>
+            <div class="footer-col">
+                <h4>Where are we?</h4>
+                <p> Calle de tu Opicina 20,<br>
+                    28029,<br>
+                    Madrid<br>
+                    Tel 91 756<br>
+                    Mobile +34<br>
+                    info@r
+                </p>
+            </div>
+            <div class="footer">
+                <h2> </h2>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Join Array Elements</title>
+</head>
+<body>
+
+<script>
+  
+  var myColor = ["Red", "Green", "White", "Black"];
+
+ 
+  var result1 = myColor.toString();
+  var result2 = myColor.join(",");
+  var result3 = myColor.join("+");
+
+  var result1Para = document.createElement("p");
+  result1Para.textContent = '"' + result1 + '"';
+  document.body.appendChild(result1Para);
+
+  var result2Para = document.createElement("p");
+  result2Para.textContent = '"' + result2 + '"';
+  document.body.appendChild(result2Para);
+
+  var result3Para = document.createElement("p");
+  result3Para.textContent = '"' + result3 + '"';
+  document.body.appendChild(result3Para);
+</script>
+
+</body>
+</html>
