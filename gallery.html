@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> Website design of a Nepalese University </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+    </head>
+    <body>
+        <section class="sub-header1">
+            <nav>
+                <a href="index.html" class="logo-container">
+                <img src="logo.jpg" alt="University Logo">
+            <div class="university-name">Nepalese Nexus University</div></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>Discover College Life: Our University in Pictures</h1>
+        </section>
+         
+        <section>
+            <div class="full-img" id="fullImgBox">
+                <img src="gallery/culture.jpg" id="fullImg">
+                <span onclick="closeFullImg()">X</span>
+            </div>
+
+            <div class="container">
+
+                <div class="img-gallery">
+                    <img src="gallery/culture.jpg" onclick="openFullImg(this.src)"> 
+                    <div class="desc">Annual Day Program</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/christmas.jpg" onclick="openFullImg(this.src)">
+                    <div class="desc">Christmas Celebration</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/fest.jpg" onclick="openFullImg(this.src)">
+                    <div class="desc">The Game Fest</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/event.jpeg" onclick="openFullImg(this.src)">
+                    <div class="desc">Prom Night with DJ</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/celebrations.jpg" onclick="openFullImg(this.src)">
+                    <div class="desc">Painting and Embroidery Competition</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/mun.jpg" onclick="openFullImg(this.src)">
+                    <div class="desc">MUN (Model United Nations)</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/graduation2.jpeg" onclick="openFullImg(this.src)">
+                    <div class="desc">Graduation Day</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/educational tour.jpg"  onclick="openFullImg(this.src)">
+                    <div class="desc">Educational Tour to Kalinchowk</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/holi.jpg"  onclick="openFullImg(this.src)">
+                    <div class="desc">Holi Festival Celebrations</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/culturalday.jpg"  onclick="openFullImg(this.src)">
+                    <div class="desc">Cultural Day</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/donation.jpeg"  onclick="openFullImg(this.src)">
+                    <div class="desc">Donation programs Organized by Social Club</div>
+                </div>
+            
+                <div class="img-gallery">
+                    <img src="gallery/blood donation.jpg"  onclick="openFullImg(this.src)">
+                    <div class="desc">Blood Donation programs Organized by Health Club</div>
+                </div>
+            
+            </div>
+            </section>
+            
+<!-------------------------Java Script---------------------------------------->
+<script>
+
+var fullImgBox = document.getElementById("fullImgBox");
+var fullImg = document.getElementById("fullImg");
+
+function openFullImg(pic){
+    fullImgBox.style.display= "flex";
+    fullImg.src = pic;
+}
+
+function closeFullImg(){
+    fullImgBox.style.display= "none";
+}
+
+</script>
+        </section>
+
+
+       <!-----------------------FOOTER-------------------------------------------->
+       <footer>
+        <h4> About Us</h4>
+       <p>
+        We are a passionate team dedicated to providing high-quality education and empowering individuals to reach their full potential. <br>With a focus on innovation and excellence, we strive to create a dynamic learning environment where students can thrive and succeed. Join us on our mission to transform lives through education and make a positive impact on the world.
+       </p>
+        <div class="footer-col">
+            <h3>Top products</h3>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <li>Jobs</li>
+            <li>Terms of Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Manage Reputation</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Guides</li>
+            <li>Research</li>
+            <li>Experts</li>
+        </div>
+        <div class="footer-col">
+            <h3>Our Link</h3>
+            <ul>
+                <li><a href="https://29a.ch/sandbox/2011/neonflames/" target="_blank">Example Website</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><a href="mailto:info@example.com">Email Us</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>You can trust us. We only send promo offers</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#" class="BLUE">SUBSCRIBE</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©2024 All rights reserved | This template is made by Nepnexus@Uni</p>
+            </div>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-whatsapp"></i>
+               </div>
+       </footer>
+    </body>
+</html>
